@@ -1,0 +1,112 @@
+//int mynum[5]={1,2,3,4,5};
+//mynum[0];
+
+//FIND THE SMALLEST ELEMENT IN ARRAY
+
+int main(){
+    int arr[4]={8,0,4,2};
+    int size=4;
+    int minval=arr[0];
+
+    for(int i=0;i<size;i++){
+        if (minval>arr[i]){
+            minval=arr[i];
+        }
+    }
+}
+
+//linear search
+
+int linearsearch(int arr[],int size,int targetval){
+    for(int i =0;i<size;i++){
+        if(arr[i]=targetval){
+            return i;
+        }
+    }
+}
+int main(){
+    //array,tv,functioncall,int result = linearSearch(arr, size, targetVal);
+}
+
+//insertion of element in array--array is of fixed size that's why shift the element from the place
+//where you want to insert 
+int arr[10]={1,2,3,5,8};
+int size=5;
+int pos=2;
+int value_to_insert=52;
+for(int i= size;i>pos;i--){
+    arr[i]=arr[i-1]
+}
+arr[pos]=val;
+size++;
+
+//deletion
+int arr[10]={1,2,3,4,5};
+int size=5;
+int pos=2;
+int val_to_delete=4;
+for(int i = pos;i<size-1;i--){
+    arr[i]=arr[i+1];
+}
+size--
+
+
+//buy and sell problem 
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int min=prices[0];
+        int max_p=0;
+        for(int i =0;i<prices.size();i++){
+           
+            if (prices[i]<min){
+                min=prices[i];
+            }
+             if (prices[i] - min > max_p) {
+                max_p = prices[i] - min;
+            }
+        }
+        return max_p;
+      
+    }
+};
+
+
+// two sum
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        for (int i = 0; i < nums.size(); i++) {
+            for (int j = i + 1; j < nums.size(); j++) {
+                if (nums[i] + nums[j] == target) {
+                    return {i, j};
+                }
+            }
+        }
+    return{};
+}
+};
+
+//consecutiveOnes
+class Solution {
+public:
+    int findMaxConsecutiveOnes(vector<int>& nums) {
+        int sum=0;
+        int sum1=0;
+        for(int i=0;i<nums.size();i++){
+            if (nums[i]==1){
+                sum++;
+            }
+            else {
+                sum = 0;
+            }
+
+            if(sum1<sum)
+            sum1=sum;
+        }
+        
+        return sum1;
+    
+}
+};
+
