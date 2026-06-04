@@ -11,6 +11,6 @@ addTaskBtn.addEventListener("click", function() {
    
    newtask.textContent = input.value;
    taskList.appendChild(newtask);
-   input.value=" ";
+   input.value="";
    console.log(newtask);
 });
